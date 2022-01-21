@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Don't Mix Them</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" charset="utf-8"></script>
+</head>
+
+<body>
+<div id="waiting-room" class="active" style="display: none">
+  <h1>You need two or three players to play this game!</h1>
+  <p>(Currently <span id="num-players"></span> player(s) present)</p>
+  <p>Use this link to invite them:</p>
+  <p id="invite-link"></p>
+</div>
+<main>
+  <div class="scores">
+    <div class="player_score">
+      You:
+      <span id="player_score">0</span>
+    </div>
+    <div class="invaders_score">
+      Invaders:
+      <span id="invaders_score">0</span>
+    </div>
+  </div>
+  <div id="battlefield"/>
+</main>
+</body>
+
+</html>

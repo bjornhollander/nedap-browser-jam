@@ -1,0 +1,138 @@
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background: linear-gradient(
+            135deg,
+            #ffcf1b,
+            #ff8b1b
+    );
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+main, #waiting-room {
+    /*display: none;*/
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    max-width: 80vw;
+    height: 675px;
+    max-height: 80vw;
+    margin: 40px 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+main.active, #waiting-room.active {
+    display: flex;
+}
+
+#battlefield {
+    display: inline-flex;
+    position: relative;
+    flex-grow: 1;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+h1, p {
+    margin: 1em 0 1em 0;
+}
+
+.scores {
+    height: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.player_score {
+    width: 50%;
+    height: 50px;
+    padding: 10px;
+    text-align: left;
+    background: linear-gradient(
+            135deg,
+            #1b2eff,
+            #1bafff
+    );
+    border-radius: 10px 0 0 10px;
+}
+
+.invaders_score {
+    width: 50%;
+    height: 50px;
+    padding: 10px;
+    text-align: right;
+    background: linear-gradient(
+            135deg,
+            #ff4c65,
+            #bb0003
+    );
+    border-radius: 0 10px 10px 0;
+}
+
+.details, #waiting-message {
+    margin-top: 30px;
+    text-align: center;
+}
+
+span {
+    font-weight: 600;
+}
+
+.player {
+    position: absolute;
+    width: 140px;
+    height: 70px;
+    background-image: url("img/trap.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.player .type {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.invader {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.type1 {
+    background-image: url("img/borg.png");
+}
+
+.type2 {
+    background-image: url("img/sentinel.png");
+}
+
+.type3 {
+    background-image: url("img/trooper.png");
+}
